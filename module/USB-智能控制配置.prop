@@ -1,0 +1,45 @@
+# USB 智能控制配置（纯净版）
+# 配置必须按照示范填写！！！
+# 所有选择开关只可选：开启/关闭
+# 双引号不要删除！
+# 包名一行一个，不要多填乱填！
+
+ADB调试=开启
+# 自动开启USB调试
+
+
+MTP文件传输=开启
+# 自动开启USB文件传输
+
+
+MTP_LOCK=开启
+# 解锁屏幕才会自动开启USB文件传输
+# 若插上电脑后一直不切MTP，可先把它改成 关闭 试试
+
+
+# 可选：机型 USB 检测节点。留空则自动探测。
+# 可在 /sys/class/power_supply/ 下找带 online 文件的 USB 相关目录
+USB_NODE=
+
+
+# 调试日志：改成 开启 会写入 /data/adb/usb_auto_debug.log
+DEBUG_LOG=关闭
+
+
+Game_ADB=屏幕横竖
+# 可选：屏幕横竖/游戏进程
+# 玩游戏时根据不同方案识别自动关闭USB调试
+# 屏幕：监听屏幕横竖屏状态关闭USB调试
+# 进程：监听游戏进程运行状态关闭USB调试
+
+# 当你使用游戏进程模式自动关闭USB调试时
+# 需要监听的游戏包名就填在这里↓
+GAME_LIST="
+com.tencent.tmgp.sgame
+com.tencent.tmgp.pubgmhd
+com.tencent.tmgp.dfm
+com.tencent.mf.uam
+com.tencent.tmgp.cod
+com.tencent.tmgp.codev
+com.tencent.tmgp.cf
+"
